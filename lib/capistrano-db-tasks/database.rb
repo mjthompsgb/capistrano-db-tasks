@@ -250,7 +250,7 @@ module Database
 
     def remote_to_remote(instance)
       remote_db = Database::Remote.new(instance)
-      raise remote_db.inspect
+      puts remote_db.inspect
     end
   end
 end
