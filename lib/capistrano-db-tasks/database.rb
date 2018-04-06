@@ -247,5 +247,9 @@ module Database
 
       local_db.load(dump_file, instance.fetch(:db_local_clean))
     end
+
+    def remote_to_remote(instance)
+      remote_db = Database::Remote.new(instance)
+    end
   end
 end
