@@ -33,9 +33,9 @@ namespace :db do
     end
 
     desc 'Synchronize this remote database and another remote database'
-    task :sync_with, :from do |t, args|
+    task :sync_with, :from_db do |t, args|
       on roles(:db) do
-        if fetch(:skip_data_sync_confirm) || Util.prompt("Are you sure you want to REPLACE THE #{@cap.fetch(:rails_env)} with the #{args[:from]}")
+        if fetch(:skip_data_sync_confirm) || Util.prompt("Are you sure you want to REPLACE THE #{@cap.fetch(:rails_env)} with the #{args[:from_db]}")
           # do it here
         end
       end
